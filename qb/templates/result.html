@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+     <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic,900" rel=stylesheet data-noprefix="">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css')}}">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container clearfix">
+    <h1>"zapstitch Quickbook comparison"</h1>
+
+{% for values in theresult %}
+     {% for nestedvalues in values %}
+         <ul class="list-group">
+           <strong>Success!</strong>
+         {% for realvalues in nestedvalues %}
+        <li class="list-group-item">   {{ realvalues }}</li>
+         {% endfor %}
+         </ul>
+         {% endfor %}
+{% endfor %}
+
+</div>
+</body>
+</html>
