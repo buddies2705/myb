@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic,900" rel=stylesheet data-noprefix="">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css')}}">
+</head>
+
+<body>
+<div class="container clearfix">
+    <h1>"zapstitch  comparison"</h1>
+    <div class="form-holder special-buttons">
+        <form method="post" action="/">
+            <button type="submit" name ="shopify" value={{ request.form.shopify }} >Shopify Comparison</button>
+            <button type="submit" name="quickbook" value={{ request.form.quickbook }} >Quickbooks Comparison</button>
+        </form>
+    </div>
+</div>
+</body>

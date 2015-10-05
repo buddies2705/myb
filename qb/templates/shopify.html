@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title></title>
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic,900" rel=stylesheet data-noprefix="">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+
+    <div class="container clearfix">
+    <h1>"zapstitch Shopify comparison"</h1>
+    <div class="form-holder">
+        <form method="post" action="/shopifymain">
+            <label>Select One or Multiple Entities(Use Ctrl)</label>
+    <select name="entities" class="selectentities" multiple>
+  <option value="orders">Order</option>
+  <option value="customers">Customer</option>
+  <option value="products">Product</option>
+   </select>
+
+  <label>Shopify Name (1):</label>
+  <input type="text" name="shopname_1" value="{{ request.form.shopname_1 }}">
+  <br>
+  <label>Shop Token (1):</label>
+  <input type="text" name="shoptoken_1" value="{{ request.form.shoptoken_1 }}">
+
+    <label>Shopify Name (1):<br></label>
+  <input type="text" name="shopname_2" value="{{ request.form.shopname_2 }}">
+
+  <label>Shop Token (1):</label>
+  <input type="text" name="shoptoken_2" value="{{ request.form.shoptoken_2 }}">
+<button type="submit" value="Submit" >SUBMIT</button>
+
+</form>
+ </div>
+
+</div>
+</body>
+</html>

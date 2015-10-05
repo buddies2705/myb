@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic,900" rel=stylesheet data-noprefix="">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css')}}">
+</head>
+
+<body>
+<div class="container clearfix">
+    <h1>"zapstitch Quickbook comparison"</h1>
+    <div class="form-holder">
+
+<form method="post" action="/qbmain">
+    <select name="entities" class="selectentities" multiple>
+        <label>Select One or Multiple Entities(Use Ctrl)</label>
+  <option value="CreditMemo">CreditMemo</option>
+  <option value="Customer">Customer</option>
+  <option value="Invoice">Invoice</option>
+  <option value="item">Item</option>
+  <option value="SalesReceipt">SalesReceipt</option>
+</select>
+  <label>QB access_token (1):</label>
+
+  <input type="text" name="qbaccesstoken_1" value="{{ request.form.qbaccesstoken_1 }}">
+
+  <label>QB access token secret (1):</label>
+  <input type="text" name="qbaccesstokensecret_1" value="{{ request.form.qbaccesstokensecret_1 }}">
+
+   <label> company_id (1):</label>
+  <input type="text" name="companyid_1" value="{{ request.form.companyid_1 }}">
+
+   <label>QB access_token (2):</label>
+  <input type="text" name="qbaccesstoken_2" value="{{ request.form.qbaccesstoken_2 }}">
+
+  <label>QB access token secret (2):</label>
+  <input type="text" name="qbaccesstokensecret_2" value="{{ request.form.qbaccesstokensecret_2 }}">
+
+   <label> company_id (2):</label>
+  <input type="text" name="companyid_2" value="{{ request.form.companyid_2 }}">
+<button type="submit" value="Submit" >SUBMIT</button>
+
+</form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
